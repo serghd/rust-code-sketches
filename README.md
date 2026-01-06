@@ -1,1 +1,1 @@
-Several apps that demonstrate working with Rust
+Some Rust code sketches
