@@ -12,7 +12,7 @@ pub fn create_and_display_object() {
         println!("#1 {:?}", u);
     };
 
-    match (&user) {
+    match &user {
         Some(u) => {
             println!("#2 {:?}", u);
         }
