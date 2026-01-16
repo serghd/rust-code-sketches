@@ -1,6 +1,8 @@
+mod enums;
 mod option;
 mod tuples;
 
+use crate::enums::process_numbers;
 use crate::tuples::{tuple_destructuring, tuple_print};
 
 fn main() {
@@ -11,22 +13,8 @@ fn main() {
     // tuple_print();
     // tuple_destructuring();
 
-    let my_number: u8 = 10;
-    match my_number {
-       number @ 10 => {
-           println!("result: {}", number)
-       },
-        _ => {
-            
-        }
-    };
-    //println!("{}", my_number2);
+    // #3. Enums
+    process_numbers();
 
-
-
-
-
-
-
-
+    /////////////
 }
