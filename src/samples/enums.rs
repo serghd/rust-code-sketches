@@ -1,12 +1,12 @@
 enum Number {
     UINT(u32),
-    INT(i32)
+    INT(i32),
 }
 
 fn get_number(number: i32) -> Number {
     let result = match number.is_positive() {
-        true =>Number::UINT(number as u32),
-        false => Number::INT(number)
+        true => Number::UINT(number as u32),
+        false => Number::INT(number),
     };
     result
 }
@@ -17,7 +17,7 @@ pub fn process_numbers() {
         match item {
             Number::UINT(number) => {
                 println!("{}", number)
-            },
+            }
             Number::INT(number) => {
                 println!("{}", number)
             }
