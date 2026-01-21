@@ -14,7 +14,7 @@ fn print_object<T: Debug>(obj: T) -> T {
 fn print_result<T, D>(obj1: T, obj2: D, obj3: D)
 where
     T: Display,
-    D: Display + PartialOrd
+    D: Display + PartialOrd,
 {
     println!("{}. Comparison result: {}", obj1, obj2 > obj3);
 }

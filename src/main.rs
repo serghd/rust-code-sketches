@@ -7,8 +7,9 @@ use crate::samples::option;
 use crate::samples::tuples::{tuple_destructuring, tuple_print};
 
 fn main() {
-    // // #1. Create and display object using Option
+    // // #1. Option
     // option::create_and_display_object();
+    option::display_weather();
 
     // // #2. Tuple Operations
     // tuple_print();
@@ -21,8 +22,8 @@ fn main() {
     // let city = City::create("City New".to_string(), "City Old".to_string(), 5000, 1219);
     // city.process_city();
 
-    // #5. Generics
-    process_objects();
+    // // #5. Generics
+    // process_objects();
 
     /////////////
 }
