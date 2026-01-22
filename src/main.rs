@@ -1,5 +1,6 @@
 mod samples;
 
+use crate::samples::collections::{binary_heap_demo, make_survey};
 use crate::samples::destructuring::City;
 use crate::samples::enums::process_numbers;
 use crate::samples::generics::process_objects;
@@ -9,7 +10,7 @@ use crate::samples::tuples::{tuple_destructuring, tuple_print};
 fn main() {
     // // #1. Option
     // option::create_and_display_object();
-    option::display_weather();
+    // option::display_weather();
 
     // // #2. Tuple Operations
     // tuple_print();
@@ -24,6 +25,13 @@ fn main() {
 
     // // #5. Generics
     // process_objects();
+
+    // #6. Collections
+    //make_survey();
+    //binary_heap_demo();
+
+
+
 
     /////////////
 }

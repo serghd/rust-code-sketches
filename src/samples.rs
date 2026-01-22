@@ -1,3 +1,4 @@
+pub mod collections;
 pub mod destructuring;
 pub mod enums;
 pub mod generics;
