@@ -1,6 +1,6 @@
 mod samples;
 
-use crate::samples::collections::{binary_heap_demo, make_survey};
+use crate::samples::collections::{binary_heap_demo, make_survey, vec_deque_demo};
 use crate::samples::destructuring::City;
 use crate::samples::enums::process_numbers;
 use crate::samples::generics::process_objects;
@@ -29,8 +29,7 @@ fn main() {
     // #6. Collections
     //make_survey();
     //binary_heap_demo();
-
-
+    //vec_deque_demo();
 
 
     /////////////
