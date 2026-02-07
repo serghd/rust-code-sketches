@@ -89,3 +89,53 @@ pub fn evaluate_trait_bounds() {
     attack_with_fireball(&wizard, &mut monster, 300);
     attack_with_sword(&knight, &mut monster);
 }
+
+////////////////////////////////////////////
+
+#[derive(Debug)]
+struct City {
+    name: String,
+    population: u32
+}
+
+impl City {
+    pub fn create(name: &str, population: u32) -> City {
+        City {
+            name: name.to_string(),
+            population
+        }
+    }
+}
+
+struct Country {
+    cities: Vec<City>
+}
+
+impl From<Vec<City>> for Country {
+    fn from(cities:  Vec<City>) -> Self {
+        Self { cities }
+    }
+}
+
+impl Country {
+      pub fn print_cities(&self) {
+        for city in &self.cities {
+            println!("City {:?} has population {:?}", city.name, city.population);
+        }
+    }
+}
+
+pub fn evaluate_trait_from() {
+    let city1 = City::create("City 1", 100);
+    let city2 = City::create("City 2", 987);
+
+    let cities = vec![city1, city2];
+    let country = Country::from(cities);
+
+    country.print_cities();
+}
+
+
+
+
+

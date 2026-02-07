@@ -5,9 +5,8 @@ use crate::samples::destructuring::City;
 use crate::samples::enums::process_numbers;
 use crate::samples::generics::process_objects;
 use crate::samples::option;
-use crate::samples::traits::{evaluate_trait, evaluate_trait_bounds};
+use crate::samples::traits::{evaluate_trait, evaluate_trait_bounds, evaluate_trait_from};
 use crate::samples::tuples::{tuple_destructuring, tuple_print};
-
 
 fn main() {
     // // #1. Option
@@ -34,8 +33,10 @@ fn main() {
     //vec_deque_demo();
 
     // #7. Traits
-    evaluate_trait();
-    evaluate_trait_bounds();
+    // evaluate_trait();
+    // evaluate_trait_bounds();
+    evaluate_trait_from();
+    
 
     /////////////
 
