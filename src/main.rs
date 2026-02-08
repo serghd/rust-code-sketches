@@ -1,5 +1,6 @@
 mod samples;
 
+use crate::samples::chaning_methods::make_chaining;
 use crate::samples::collections::{binary_heap_demo, make_survey, vec_deque_demo};
 use crate::samples::destructuring::City;
 use crate::samples::enums::process_numbers;
@@ -27,17 +28,22 @@ fn main() {
     // // #5. Generics
     // process_objects();
 
-    // #6. Collections
+    // // #6. Collections
     //make_survey();
     //binary_heap_demo();
     //vec_deque_demo();
 
-    // #7. Traits
+    // // #7. Traits
     // evaluate_trait();
     // evaluate_trait_bounds();
     // evaluate_trait_from();
     //print_string_as_bytes("abc");
-    print_objects_as_ref();
+    // print_objects_as_ref();
+    
+    // #8. Chaining methods
+    make_chaining();
+    
+    
 
     /////////////
 }

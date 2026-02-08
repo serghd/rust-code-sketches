@@ -5,3 +5,4 @@ pub mod generics;
 pub mod option;
 pub mod traits;
 pub mod tuples;
+pub mod chaning_methods;
