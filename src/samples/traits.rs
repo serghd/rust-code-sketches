@@ -1,9 +1,9 @@
 use std::fmt;
-use std::fmt::{Debug, Formatter};
+use std::fmt::{Debug, Display, Formatter};
 
 #[derive(Debug)]
 struct Animal {
-    name: String
+    name: String,
 }
 
 trait Dog {
@@ -13,7 +13,7 @@ trait Dog {
 
 impl Dog for Animal {
     fn bark(&self) {
-       println!("{} is barking!", self.name);
+        println!("{} is barking!", self.name);
     }
     fn run(&self) {
         println!("{} is running!", self.name);
@@ -29,7 +29,7 @@ impl fmt::Display for Animal {
 
 pub fn evaluate_trait() {
     let dog = Animal {
-        name: "Dog".to_string()
+        name: "Dog".to_string(),
     };
     dog.bark();
     dog.run();
@@ -41,26 +41,30 @@ pub fn evaluate_trait() {
 
 #[derive(Debug)]
 struct Monster {
-    health: i32
+    health: i32,
 }
 
 #[derive(Debug)]
 struct Wizard {
-    health: i32
+    health: i32,
 }
 
 #[derive(Debug)]
 struct Knight {
-    health: i32
+    health: i32,
 }
 
-trait FightClose{}
-trait FightFromDistance{}
+trait FightClose {}
+trait FightFromDistance {}
 
 impl FightFromDistance for Wizard {}
 impl FightClose for Knight {}
 
-fn attack_with_fireball<T: FightFromDistance + Debug>(character: &T, opponent: &mut Monster, distance: u32) {
+fn attack_with_fireball<T: FightFromDistance + Debug>(
+    character: &T,
+    opponent: &mut Monster,
+    distance: u32,
+) {
     opponent.health -= 10;
     println!(
         "You attack with your bow. Your opponent now has {} health left.  You are now at: {:?}",
@@ -77,15 +81,9 @@ fn attack_with_sword<T: FightClose + Debug>(character: &T, opponent: &mut Monste
 }
 
 pub fn evaluate_trait_bounds() {
-    let wizard = Wizard {
-        health: 100
-    };
-    let knight = Knight {
-        health: 200
-    };
-    let mut monster = Monster {
-        health: 150
-    };
+    let wizard = Wizard { health: 100 };
+    let knight = Knight { health: 200 };
+    let mut monster = Monster { health: 150 };
     attack_with_fireball(&wizard, &mut monster, 300);
     attack_with_sword(&knight, &mut monster);
 }
@@ -95,30 +93,30 @@ pub fn evaluate_trait_bounds() {
 #[derive(Debug)]
 struct City {
     name: String,
-    population: u32
+    population: u32,
 }
 
 impl City {
     pub fn create(name: &str, population: u32) -> City {
         City {
             name: name.to_string(),
-            population
+            population,
         }
     }
 }
 
 struct Country {
-    cities: Vec<City>
+    cities: Vec<City>,
 }
 
 impl From<Vec<City>> for Country {
-    fn from(cities:  Vec<City>) -> Self {
+    fn from(cities: Vec<City>) -> Self {
         Self { cities }
     }
 }
 
 impl Country {
-      pub fn print_cities(&self) {
+    pub fn print_cities(&self) {
         for city in &self.cities {
             println!("City {:?} has population {:?}", city.name, city.population);
         }
@@ -135,7 +133,38 @@ pub fn evaluate_trait_from() {
     country.print_cities();
 }
 
+////////////////////////////////////////////
 
+pub fn print_string_as_bytes<T>(input: T)
+where
+    T: AsRef<[u8]> + Debug,
+{
+    println!("{:?}", input.as_ref());
+}
 
+struct User {
+    name: String,
+    age: u32,
+}
 
+impl AsRef<str> for User {
+    fn as_ref(&self) -> &str {
+        &self.name
+    }
+}
 
+pub fn print_as_ref<T>(input: T)
+where
+    T: AsRef<str>,
+{
+    println!("{}", input.as_ref());
+}
+
+pub fn print_objects_as_ref() {
+    print_as_ref("abc");
+    print_as_ref(String::from("abc (String)"));
+    print_as_ref(User {
+        name: "Nick".to_string(),
+        age: 21,
+    })
+}
