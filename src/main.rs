@@ -5,6 +5,7 @@ use crate::samples::collections::{binary_heap_demo, make_survey, vec_deque_demo}
 use crate::samples::destructuring::City;
 use crate::samples::enums::process_numbers;
 use crate::samples::generics::process_objects;
+use crate::samples::iterators::evaluate_iterators_1;
 use crate::samples::option;
 use crate::samples::traits::{evaluate_trait, evaluate_trait_bounds, evaluate_trait_from, print_objects_as_ref, print_string_as_bytes};
 use crate::samples::tuples::{tuple_destructuring, tuple_print};
@@ -40,9 +41,12 @@ fn main() {
     //print_string_as_bytes("abc");
     // print_objects_as_ref();
     
-    // #8. Chaining methods
-    make_chaining();
-    
+    // // #8. Chaining methods
+    // make_chaining();
+
+    // #9. Iterators
+    evaluate_iterators_1();
+
     
 
     /////////////
