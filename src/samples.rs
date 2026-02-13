@@ -1,9 +1,9 @@
+pub mod chaning_methods;
 pub mod collections;
 pub mod destructuring;
 pub mod enums;
 pub mod generics;
+pub mod iterators;
 pub mod option;
 pub mod traits;
 pub mod tuples;
-pub mod chaning_methods;
-pub mod iterators;
