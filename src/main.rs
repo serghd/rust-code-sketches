@@ -1,6 +1,7 @@
 mod samples;
 
 use crate::samples::chaning_methods::make_chaining;
+use crate::samples::closures::{evaluate_closures_1, evaluate_closures_2, evaluate_closures_3};
 use crate::samples::collections::{binary_heap_demo, make_survey, vec_deque_demo};
 use crate::samples::destructuring::City;
 use crate::samples::enums::process_numbers;
@@ -49,7 +50,12 @@ fn main() {
 
     // #9. Iterators
     // evaluate_iterators_1();
-    evaluate_iterators_2();
+    // evaluate_iterators_2();
+
+    // #10. Closures
+    // evaluate_closures_1();
+    // evaluate_closures_2();
+    evaluate_closures_3();
 
     ////////////////////////////////////////////
 }

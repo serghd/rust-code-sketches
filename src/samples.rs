@@ -1,4 +1,5 @@
 pub mod chaning_methods;
+pub mod closures;
 pub mod collections;
 pub mod destructuring;
 pub mod enums;
