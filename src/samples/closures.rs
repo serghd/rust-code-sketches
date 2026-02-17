@@ -52,3 +52,40 @@ pub fn evaluate_closures_3() {
         .collect::<Vec<String>>();
     println!("{:?}", v_filtered);
 }
+
+pub fn evaluate_closures_4() {
+    let v = vec![
+        Company::new("company 1", "CEO 1"),
+        Company::new("company 2", ""),
+        Company::new("company 3", "CEO 3"),
+    ];
+    let mut res_v = vec![];
+    v.iter().for_each(|company| {
+        res_v.push(company.get_ceo().ok_or_else(|| {
+            let str = format!("No CEO found for {}", company.name);
+            str
+        }))
+    });
+    println!("{:?}", res_v);
+}
+
+pub fn evaluate_closures_5() {
+    let locations = vec![
+        ("Nevis", 25),
+        ("Taber", 8428),
+        ("Markerville", 45),
+        ("Cardston", 3585),
+    ];
+
+    let mut locations_peakable = locations.iter().peekable();
+    while locations_peakable.peek().is_some() {
+        match locations_peakable.peek() {
+            Some((name, count)) if *count < 100 => {
+                println!("{} is a village with population {}", name, count)
+            }
+            Some((name, count)) => println!("{} is a town with population {}", name, count),
+            None => break,
+        }
+        locations_peakable.next();
+    }
+}
