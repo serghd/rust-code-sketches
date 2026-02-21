@@ -25,25 +25,25 @@ pub fn show_city_info() {
 
 ////////////////////////////////////////////
 
-struct Advanturer<'a> {
+struct Adventurer<'a> {
     name: &'a str,
     hit_points: u32,
 }
 
-impl Advanturer<'_> {
+impl Adventurer<'_> {
     pub fn take_damage(&mut self) {
         self.hit_points -= 100;
     }
 }
 
-impl Display for Advanturer<'_> {
+impl Display for Adventurer<'_> {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         write!(f, "{} has {} hit-points", self.name, self.hit_points)
     }
 }
 
 pub fn evaluate_advanturer() {
-    let mut advanturer = Advanturer {
+    let mut advanturer = Adventurer {
         name: "Billy",
         hit_points: 100_00,
     };

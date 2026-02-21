@@ -10,6 +10,7 @@ use crate::samples::destructuring::City;
 use crate::samples::enums::process_numbers;
 use crate::samples::generics::process_objects;
 use crate::samples::inspect::evaluate_inspect;
+use crate::samples::interior_mutability::{use_cell, use_mutex, use_rw_lock};
 use crate::samples::iterators::{evaluate_iterators_1, evaluate_iterators_2};
 use crate::samples::lifetimes::{evaluate_advanturer, get_str, show_city_info};
 use crate::samples::option;
@@ -70,7 +71,12 @@ fn main() {
     // #12. Lifetimes
     // dbg!(get_str());
     // show_city_info();
-    evaluate_advanturer();
+    // evaluate_advanturer();
+
+    // #13. Interior mutability
+    // use_cell();
+    // use_mutex();
+    use_rw_lock();
 
     ////////////////////////////////////////////
 }
