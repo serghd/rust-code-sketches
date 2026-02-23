@@ -6,21 +6,21 @@ use std::sync::{Mutex, RwLock};
 struct Phone<'a> {
     name: &'a str,
     date_issued: u32,
-    on_sale: Cell<bool>
+    on_sale: Cell<bool>,
 }
 
 pub fn use_cell() {
-    let phone  = Phone {
+    let phone = Phone {
         name: "Samsung",
         date_issued: 10500,
-        on_sale: Cell::new(true)
+        on_sale: Cell::new(true),
     };
     phone.on_sale.set(false);
     println!("phone {:?}", phone);
 }
 
 pub fn use_mutex() {
-    let my_mutex  = Mutex::new(5);
+    let my_mutex = Mutex::new(5);
     println!("first attempt: {:?}", my_mutex);
     let mut my_val_guard = my_mutex.lock().unwrap();
     *my_val_guard = 10;

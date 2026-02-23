@@ -15,6 +15,7 @@ use crate::samples::interior_mutability::{use_cell, use_mutex, use_rw_lock};
 use crate::samples::iterators::{evaluate_iterators_1, evaluate_iterators_2};
 use crate::samples::lifetimes::{evaluate_advanturer, get_str, show_city_info};
 use crate::samples::option;
+use crate::samples::rc::{evaluate_rc, evaluate_rc2};
 use crate::samples::traits::{
     evaluate_trait, evaluate_trait_bounds, evaluate_trait_from, print_objects_as_ref,
     print_string_as_bytes,
@@ -81,8 +82,11 @@ fn main() {
 
     // #14. Cow
     // evaluate_cow();
-    evaluate_cow_vector();
-    
+    // evaluate_cow_vector();
+
+    // #15. Reference Counter
+    // evaluate_rc();
+    evaluate_rc2()
 
     ////////////////////////////////////////////
 }

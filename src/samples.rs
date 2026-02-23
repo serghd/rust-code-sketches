@@ -1,14 +1,15 @@
 pub mod chaning_methods;
 pub mod closures;
 pub mod collections;
+pub mod cow;
 pub mod destructuring;
 pub mod enums;
 pub mod generics;
 pub mod inspect;
+pub mod interior_mutability;
 pub mod iterators;
 pub mod lifetimes;
 pub mod option;
+pub mod rc;
 pub mod traits;
 pub mod tuples;
-pub mod interior_mutability;
-pub mod cow;
