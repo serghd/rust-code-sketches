@@ -11,3 +11,4 @@ pub mod option;
 pub mod traits;
 pub mod tuples;
 pub mod interior_mutability;
+pub mod cow;

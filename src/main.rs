@@ -6,6 +6,7 @@ use crate::samples::closures::{
     evaluate_closures_5,
 };
 use crate::samples::collections::{binary_heap_demo, make_survey, vec_deque_demo};
+use crate::samples::cow::{evaluate_cow, evaluate_cow_vector};
 use crate::samples::destructuring::City;
 use crate::samples::enums::process_numbers;
 use crate::samples::generics::process_objects;
@@ -76,7 +77,12 @@ fn main() {
     // #13. Interior mutability
     // use_cell();
     // use_mutex();
-    use_rw_lock();
+    // use_rw_lock();
+
+    // #14. Cow
+    // evaluate_cow();
+    evaluate_cow_vector();
+    
 
     ////////////////////////////////////////////
 }
