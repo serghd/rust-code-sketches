@@ -16,6 +16,7 @@ use crate::samples::iterators::{evaluate_iterators_1, evaluate_iterators_2};
 use crate::samples::lifetimes::{evaluate_advanturer, get_str, show_city_info};
 use crate::samples::option;
 use crate::samples::rc::{evaluate_rc, evaluate_rc2};
+use crate::samples::threads::call_thread;
 use crate::samples::traits::{
    evaluate_trait, evaluate_trait_bounds, evaluate_trait_from, print_objects_as_ref,
    print_string_as_bytes,
@@ -86,7 +87,14 @@ fn main() {
 
    // #15. Reference Counter
    // evaluate_rc();
-   evaluate_rc2()
+   // evaluate_rc2();
+
+   // $16. Threads
+   call_thread();
+
 
    ////////////////////////////////////////////
+
+
+
 }

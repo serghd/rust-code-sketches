@@ -13,3 +13,4 @@ pub mod option;
 pub mod rc;
 pub mod traits;
 pub mod tuples;
+pub mod threads;
