@@ -11,6 +11,6 @@ pub mod iterators;
 pub mod lifetimes;
 pub mod option;
 pub mod rc;
+pub mod threads;
 pub mod traits;
 pub mod tuples;
-pub mod threads;

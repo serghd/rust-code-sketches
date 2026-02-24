@@ -3,7 +3,7 @@ mod samples;
 use crate::samples::chaning_methods::make_chaining;
 use crate::samples::closures::{
    evaluate_closures_1, evaluate_closures_2, evaluate_closures_3, evaluate_closures_4,
-   evaluate_closures_5,
+   evaluate_closures_5, evaluate_closures_6,
 };
 use crate::samples::collections::{binary_heap_demo, make_survey, vec_deque_demo};
 use crate::samples::cow::{evaluate_cow, evaluate_cow_vector};
@@ -67,6 +67,7 @@ fn main() {
    //evaluate_closures_3();
    //evaluate_closures_4();
    //evaluate_closures_5();
+   evaluate_closures_6();
 
    // #11. Inspect
    //evaluate_inspect();
@@ -90,11 +91,7 @@ fn main() {
    // evaluate_rc2();
 
    // $16. Threads
-   call_thread();
-
+   // call_thread();
 
    ////////////////////////////////////////////
-
-
-
 }
