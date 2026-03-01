@@ -1,4 +1,5 @@
 pub mod chaning_methods;
+pub mod channels;
 pub mod closures;
 pub mod collections;
 pub mod cow;

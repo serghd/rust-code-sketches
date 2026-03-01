@@ -1,6 +1,7 @@
 mod samples;
 
 use crate::samples::chaning_methods::make_chaining;
+use crate::samples::channels::use_channels;
 use crate::samples::closures::{
    evaluate_closures_1, evaluate_closures_2, evaluate_closures_3, evaluate_closures_4,
    evaluate_closures_5, evaluate_closures_6,
@@ -95,11 +96,14 @@ fn main() {
    // evaluate_rc();
    // evaluate_rc2();
 
-   // $16. Threads
+   // #16. Threads
    // call_thread();
    // call_concurrent_threads();
    // using_arc_variant1();
-   using_arc_variant2();
+   // using_arc_variant2();
+
+   // #17. Channels
+   use_channels();
 
    ////////////////////////////////////////////
 }
