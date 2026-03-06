@@ -17,3 +17,4 @@ pub mod rc;
 pub mod threads;
 pub mod traits;
 pub mod tuples;
+pub mod deref;

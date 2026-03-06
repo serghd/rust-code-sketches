@@ -28,6 +28,7 @@ use crate::samples::traits::{
 };
 use crate::samples::tuples::{tuple_destructuring, tuple_print};
 use std::thread::Builder;
+use crate::samples::deref::evaluate_deref;
 
 fn main() {
    // // #1. Option
@@ -112,7 +113,10 @@ fn main() {
    // evaluate_errors();
 
    // #19. Builder
-   use_builder();
+   // use_builder();
+   
+   // #20. Deref 
+   evaluate_deref();
 
    ////////////////////////////////////////////
 }
