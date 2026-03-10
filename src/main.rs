@@ -1,4 +1,5 @@
 mod samples;
+mod crates_and_modules;
 
 use crate::samples::boxes::evaluate_errors;
 use crate::samples::builder::use_builder;
@@ -116,7 +117,15 @@ fn main() {
    // use_builder();
    
    // #20. Deref 
-   evaluate_deref();
+   // evaluate_deref();
+
+   // // #21. Crates and modules
+   // use crates_and_modules::print_things;
+   // print_things::prints_one_thing("One thing...");
+   // use crates_and_modules::country;
+   // country::province::city::print_city("Canada", "New Brunswick", "Moncton");
+   // // or just:
+   // crates_and_modules::country::province::city::print_city("Canada", "New Brunswick", "Moncton");
 
    ////////////////////////////////////////////
 }
